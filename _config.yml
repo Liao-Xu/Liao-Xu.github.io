@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-SG"
-title                    : "Xu Liao / Personal Homepage"
+title                    : "Xu Liao's Personal Homepage"
 title_separator          : "-"
 name                     : &name "Xu Liao"
 description              : &description "A fifth-year Ph.D. student at the National University of Singapore"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Xu Liao"
+  name             : "Xu Liao (廖栩)"
   avatar           : "me.png"
   bio              : "A fifth-year Ph.D. student at the National University of Singapore"
   location         : "Singapore"
