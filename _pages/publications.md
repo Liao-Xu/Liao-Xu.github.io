@@ -1,11 +1,12 @@
 ---
 layout: archive
 title: "Publication"
-# permalink: /publications/
 author_profile: true
 ---
 
-<!--{% if author.googlescholar %}
+<!--
+# permalink: /publications/
+{% if author.googlescholar %}
   You can also find my articles on <u><a href="{{[author.googlescholar](https://scholar.google.com/citations?user=_F26oo4AAAAJ&hl=en)}}">my Google Scholar profile</a>.</u>
 {% endif %}
 
