@@ -1,4 +1,4 @@
-.container {
+/* .container {
     width:100%;
     border:1px solid #d3d3d3;
 }
@@ -14,3 +14,29 @@
 .container .content {
     display: none;
     padding : 5px;
+
+.container {
+    width: 100%;
+    border: 4px solid black; /* 加粗的黑色边框 */
+} */
+
+.container div {
+    width: 100%;
+}
+
+.container .header {
+    background-color: black; /* 黑色背景 */
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white; /* 白色文字 */
+    opacity: 0.9; /* 轻微透明 */
+}
+
+.container .content {
+    display: none;
+    padding: 16px;
+    background-color: white; /* 白色背景 */
+    color: black; /* 黑色文字 */
+    opacity: 0.9; /* 轻微透明 */
+}
