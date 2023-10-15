@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Publication (*: equal contributions; †: corresponding author; #: alphabetical order)"
+title: "Publication"
 # permalink: /publications/
 author_profile: true
 ---
@@ -13,9 +13,10 @@ author_profile: true
 
 {% for post in site.publications reversed %}
   {% include archive-single.html %}
-{% endfor %} -->
+{% endfor %} 
+(*: equal contributions; †: corresponding author; #: alphabetical order)-->
 
-**Journal**
+**Journal (*: equal contributions; #: alphabetical order)**
 
 - Liu, W.* , **Liao, X.***, Luo, Z., Yang, Y., Lau, M. C., Jiao, Y., ... & Liu, J. (2023). Probabilistic embedding, clustering, and alignment for integrating spatial transcriptomics data with PRECAST. ***Nature Communications***, 14(1), 296.
 - Liu, W., **Liao, X.**, Yang, Y., Lin, H., Yeong, J., Zhou, X., ... & Liu, J. (2022). Joint dimension reduction and clustering analysis of single-cell RNA-seq and spatial transcriptomics data. ***Nucleic Acids Research***, 50(12), e72-e72.
