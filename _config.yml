@@ -11,7 +11,7 @@ title                    : "Xu Liao's Personal Homepage"
 title_separator          : "-"
 name                     : &name "Xu Liao"
 description              : &description "A fifth-year Ph.D. student at the National University of Singapore"
-url                      : https://liao-xu.github.io # the base hostname & protocol for your site e.g. "https://liao-xu.github.io"
+url                      : https://liao-xu.com # the base hostname & protocol for your site e.g. "https://liao-xu.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Liao-Xu/Liao-Xu.github.io"
 teaser                   :  "me.png" # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -96,13 +96,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/Liao-Xu"
+  github           : "Liao-Xu"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/liao-xu/"
   orcid            : "https://orcid.org/0000-0003-1851-4395"
   pinterest        :
   soundcloud       :
