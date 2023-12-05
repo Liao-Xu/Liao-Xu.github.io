@@ -17,7 +17,7 @@ My research focuses on RNA velocity, representation learning, deep generative mo
   *Aug. 2019 -- present*  
   **National University of Singapore**  
   Duke-NUS Medical School | Advisor: [Prof. Jin Liu](https://sites.google.com/view/liujinlab/home)  
---
+---
 - **Bachelor Degree in Statistics**  
   *Sept. 2015 -- Jun. 2019*  
   **Xi’an Jiaotong University**   
