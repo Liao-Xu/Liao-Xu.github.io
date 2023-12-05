@@ -1,16 +1,23 @@
 ---
 layout: archive
 title: "Talks and presentations"
-permalink: /talks/
+permalink: /tal/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+<section>
+    <h2>Talks and Presentations</h2>
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+    <h3>Conference Presentations</h3>
+    <ul>
+        <li><i>IJCNN</i> 2023 (Queensland, Australia): <b>Invariant and Sufficient Supervised Representation Learning</b>. 2023.</li>
+        <li>12th <i>ICSA</i> Conference (Hongkong, China): <b>Stochastic Differential Equations Informed RNA Velocity with SDEvelo</b>. 2023.</li>
+    </ul>
 
-{% endif %}
+    <h3>Invited Talks</h3>
+    <ul>
+        <li>1st <i>Duke-NUS Health Data Science Symposium</i> (Singapore, Singapore): <b>Stochastic Differential Equations Informed RNA Velocity with SDEvelo</b>. 2023.</li>
+        <li>Xi'an Jiaotong University (Xi'an, China): <b>Deep Dimension Reduction for Supervised Representation Learning</b>. 2021.</li>
+    </ul>
+</section>
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
