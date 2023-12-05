@@ -18,6 +18,18 @@ My research focuses on RNA velocity, representation learning, deep generative mo
   *Aug. 2019 -- present*
 
 - **Bachelor's Degree in Statistics**, School of Mathematics and Statistics, Xi'an Jiaotong University  
+  *Sept. 2015 -- Jun. 2019*
+- **Ph.D. Candidate in Biostatistics and Health Data Science**  
+  *Aug. 2019 -- present*  
+  **National University of Singapore**  
+  Duke-NUS Medical School | Advisor: [Prof. Jin Liu](https://sites.google.com/view/liujinlab/home)  
+
+---
+
+- **Bachelor Degree in Statistics**  
   *Sept. 2015 -- Jun. 2019*  
+  **Xi’an Jiaotong University**   
+  School of Mathematics and Statistics | Mentor: [Prof. Yao Wang](https://yaowang15.github.io/)
+
 
 
