@@ -13,8 +13,8 @@ I am **Xu Liao**, a Ph.D. Candidate in Biostatistics and Health Data Science at 
 My research focuses on RNA velocity, representation learning, deep generative models, and clustering analysis. I employ advanced statistical techniques to model complex biological datasets, particularly in spatially resolved transcriptomics and single-cell RNA sequencing data. My expertise lies in applying both deep learning and statistical methods to reveal novel insights from these datasets. Looking forward, I am interested in AI for science.
 
 ## Education
-- Ph.D. Candidate in Biostatistics and Health Data Science, **National University of Singapore** 
-  *Aug. 2019 -- present*   
+- Ph.D. Candidate in Biostatistics and Health Data Science, **National University of Singapore**
+  *Aug. 2019 -- present*
   Duke-NUS Medical School | Advisor: [Prof. Jin Liu](https://sites.google.com/view/liujinlab/home)
   
 - Bachelor Degree in Statistics, **Xi’an Jiaotong University**   
