@@ -10,7 +10,7 @@ locale                   : "en-SG"
 title                    : "Xu Liao's Personal Homepage"
 title_separator          : "-"
 name                     : &name "Xu Liao"
-description              : &description "A fifth-year Ph.D. student at the National University of Singapore"
+description              : &description "Biostats Ph.D. @ Duke-NUS | Biostatistics Researcher"
 url                      : https://liao-xu.github.io # the base hostname & protocol for your site e.g. "https://liao-xu.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Liao-Xu/Liao-Xu.github.io"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Xu Liao (廖栩)"
+  name             : "Xu Liao"
   avatar           : "me.png"
   bio              : "A fifth-year Ph.D. student at the National University of Singapore"
   location         : "Singapore"
