@@ -14,7 +14,7 @@ My research focuses on RNA velocity, representation learning, deep generative mo
 
 ## Education
 - Ph.D. in Biostatistics and Health Data Science, **National University of Singapore**  
-  *Aug. 2019 -- present*  
+  *Aug. 2019 -- Oct. 2024*  
   Duke-NUS Medical School | Advisor: [Prof. Jin Liu](https://sites.google.com/view/liujinlab/home)
   
 - Bachelor in Statistics, **Xi’an Jiaotong University**   
