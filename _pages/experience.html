@@ -5,33 +5,129 @@ permalink: /exp/
 author_profile: true
 ---
 <style>
-    section {
+    .experience-section {
         font-size: 0.9em;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
     }
-    li {
-        margin-bottom: 15px;
+    .timeline {
+        list-style: none;
+        padding: 0;
+    }
+    .timeline li {
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 25px;
+        border-left: 2px solid #e6e6e6;
+        margin-left: 15px;
+    }
+    .timeline li:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: #4a90e2;
+        border: 2px solid white;
+        box-shadow: 0 0 0 2px #4a90e2;
+        border-radius: 50%;
+        position: absolute;
+        left: -8.5px;
+        top: 0;
+    }
+    .timeline li:last-child {
+        border-left: 2px solid transparent;
+    }
+    .institution {
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+    .position {
+        color: #4a90e2;
+        font-weight: 500;
+        display: inline-block;
+    }
+    .duration {
+        color: #666;
+        font-size: 0.95em;
+        margin: 5px 0;
+    }
+    .supervisor {
+        color: #555;
         line-height: 1.4;
     }
+    .supervisor a {
+        color: #4a90e2;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .supervisor a:hover {
+        color: #357abd;
+        text-decoration: underline;
+    }
+    .experience-card {
+        background: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 5px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .experience-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 </style>
-<section>
-    <ul>
+
+<div class="experience-section">
+    <ul class="timeline">
         <li>
-            <strong>The Chinese University of Hong Kong, Shenzhen</strong> - Visiting Postdoctoral Fellow, School of Data Science <br> Otc 2024 – Present <br> Worked with Prof. <a href="https://sites.google.com/view/liujinlab/home">Jin Liu</a>.
+            <div class="experience-card">
+                <div class="institution">The Chinese University of Hong Kong, Shenzhen</div>
+                <div class="position">Visiting Postdoctoral Fellow, School of Data Science</div>
+                <div class="duration">October 2024 – Present</div>
+                <div class="supervisor">Work with Prof. <a href="https://sites.google.com/view/liujinlab/home">Jin Liu</a></div>
+            </div>
         </li>
         <li>
-            <strong>The Chinese University of Hong Kong, Shenzhen</strong> - Research Assistant, School of Data Science <br> July 2023 – Otc 2024 <br> Worked with Prof. <a href="https://sites.google.com/view/liujinlab/home">Jin Liu</a>.
+            <div class="experience-card">
+                <div class="institution">The Chinese University of Hong Kong, Shenzhen</div>
+                <div class="position">Research Assistant, School of Data Science</div>
+                <div class="duration">July 2023 – October 2024</div>
+                <div class="supervisor">Worked with Prof. <a href="https://sites.google.com/view/liujinlab/home">Jin Liu</a></div>
+            </div>
         </li>
         <li>
-            <strong>Wuhan University</strong> - Internship, School of Mathematics and Statistics <br> Jan 2021 – Jun 2021 <br> Worked with Prof. <a href="http://jszy.whu.edu.cn/jiaoyuling/en/index.htm">Yuling Jiao</a>.
+            <div class="experience-card">
+                <div class="institution">Wuhan University</div>
+                <div class="position">Internship, School of Mathematics and Statistics</div>
+                <div class="duration">January 2021 – June 2021</div>
+                <div class="supervisor">Worked with Prof. <a href="http://jszy.whu.edu.cn/jiaoyuling/en/index.htm">Yuling Jiao</a></div>
+            </div>
         </li>
         <li>
-            <strong>Hong Kong University of Science and Technology</strong> - Visiting Undergraduate Student, Department of Mathematics <br> Mar 2019 – May 2019 <br> Worked with Prof. <a href="https://sites.google.com/site/eeyangc/">Can Yang</a>.
+            <div class="experience-card">
+                <div class="institution">Hong Kong University of Science and Technology</div>
+                <div class="position">Visiting Undergraduate Student, Department of Mathematics</div>
+                <div class="duration">March 2019 – May 2019</div>
+                <div class="supervisor">Worked with Prof. <a href="https://sites.google.com/site/eeyangc/">Can Yang</a></div>
+            </div>
         </li>
         <li>
-            <strong>National University of Singapore</strong> - Internship, Duke-NUS Medical School <br> Aug 2018 – Dec 2018 <br> Worked with Prof. <a href="https://sites.google.com/view/liujinlab/home">Jin Liu</a>.
+            <div class="experience-card">
+                <div class="institution">National University of Singapore</div>
+                <div class="position">Internship, Duke-NUS Medical School</div>
+                <div class="duration">August 2018 – December 2018</div>
+                <div class="supervisor">Worked with Prof. <a href="https://sites.google.com/view/liujinlab/home">Jin Liu</a></div>
+            </div>
         </li>
         <li>
-            <strong>National University of Singapore</strong> - Summer Workshop, School of Computing <br> Jul 2018 – Aug 2018 <br> Worked with Prof. <a href="https://www.comp.nus.edu.sg/~ngtk/">NG Teck Khim</a>.
+            <div class="experience-card">
+                <div class="institution">National University of Singapore</div>
+                <div class="position">Summer Workshop, School of Computing</div>
+                <div class="duration">July 2018 – August 2018</div>
+                <div class="supervisor">Worked with Prof. <a href="https://www.comp.nus.edu.sg/~ngtk/">NG Teck Khim</a></div>
+            </div>
         </li>
     </ul>
-</section>
+</div>
