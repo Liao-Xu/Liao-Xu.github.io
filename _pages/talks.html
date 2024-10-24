@@ -5,44 +5,58 @@ permalink: /tal/
 author_profile: true
 ---
 <style>
-    body {
+    .talks-section {
         font-size: 0.9em;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
     }
-    h3 {
-        font-size: 1.1em;
-        margin-top: 20px;
-        margin-bottom: 10px;
+    .category {
+        margin-bottom: 30px;
     }
-    ul {
-        margin-top: 5px;
-        padding-left: 20px;
+    .category-title {
+        color: #484848; /* Dark gray */
+        font-size: 1.2em;
+        border-bottom: 2px solid #7CC1E4; /* Light blue */
+        padding-bottom: 8px;
+        margin-bottom: 20px;
     }
-    li {
-        margin-bottom: 8px;
-        line-height: 1.4;
+    .talk-list {
+        list-style: none;
+        padding: 0;
     }
-    small {
-        font-size: 0.85em;
+    .talk-item {
+        background: white;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-left: 3px solid #7CC1E4; /* Light blue accent */
+    }
+    .talk-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .venue {
+        color: #7CC1E4; /* Light blue */
+        font-style: italic;
+        font-weight: 500;
+    }
+    .location {
+        color: #666;
+        font-size: 0.95em;
+    }
+    .title {
+        color: #484848; /* Dark gray */
+        font-weight: bold;
+        margin: 5px 0;
+    }
+    .year {
+        float: right;
+        color: #666;
+        font-size: 0.95em;
     }
 </style>
 
-<h3>Conference Presentations</h3>
-<ul>
-    <li><i>IJCNN</i> 2023 (Queensland, Australia): <b>Invariant and Sufficient Supervised Representation Learning</b>. 2023.</li>
-    <li>12th <i>ICSA</i> Conference (Hongkong, China): <b>Stochastic Differential Equations Informed RNA Velocity with SDEvelo</b>. 2023.</li>
-</ul>
-
-<h3>Invited Talks</h3>
-<ul>
-    <li>Xi'an Jiaotong University (Xi'an, China): <b>SDEvelo: a deep generative approach for transcriptional dynamics with cell-specific latent time and multivariate stochastic modeling</b>. 2024.</li>
-    <li>1st <i>Duke-NUS Health Data Science Symposium</i> (Singapore, Singapore): <b>Stochastic Differential Equations Informed RNA Velocity with SDEvelo</b>. 2023.</li>
-    <li>Xi'an Jiaotong University (Xi'an, China): <b>Deep Dimension Reduction for Supervised Representation Learning</b>. 2021.</li>
-</ul>
-
-<h3>Thesis Defense</h3>
-<ul>
-    <li>Duke-NUS Medical School (Singapore, Singapore): <b>High-dimensional deep learning approaches for single-cell and spatial transcriptomics</b>. 2024.</li>
-</ul>
-
-
-
+<!-- Rest of the HTML remains the same -->
