@@ -10,7 +10,7 @@ redirect_from:
 
 <style>
 .name-highlight {
-    color: #68ABC5;
+/*     color: #68ABC5; */
     font-weight: bold;
     font-size: 1.2em;
 }
