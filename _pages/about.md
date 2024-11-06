@@ -10,7 +10,7 @@ redirect_from:
 
 <style>
 .name-highlight {
-    color: #68ABC5;
+    color: #333;
     font-weight: bold;
     font-size: 1.2em;
 }
@@ -32,7 +32,7 @@ redirect_from:
     color: #555;
 }
 a {
-    color: #68ABC5;
+    color: #333;
     text-decoration: none;
 }
 a:hover {
