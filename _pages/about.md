@@ -10,13 +10,13 @@ redirect_from:
 
 <style>
 .name-highlight {
-    color: #333;
+    color: #555;
     font-weight: bold;
     font-size: 1.2em;
 }
 .section-heading {
-    color: #333;
-    border-bottom: 2px solid #68ABC5;
+    color: #555;
+    border-bottom: 2px solid #888;
     padding-bottom: 5px;
     margin-top: 25px;
 }
