@@ -10,13 +10,13 @@ redirect_from:
 
 <style>
 .name-highlight {
-    color: #555;
+    color: #68ABC5;
     font-weight: bold;
     font-size: 1.2em;
 }
 .section-heading {
-    color: #555;
-    border-bottom: 2px solid #888;
+    color: #666;
+    border-bottom: 2px solid #68ABC5;
     padding-bottom: 5px;
     margin-top: 25px;
 }
@@ -32,7 +32,7 @@ redirect_from:
     color: #555;
 }
 a {
-    color: #333;
+    color: #68ABC5;
     text-decoration: none;
 }
 a:hover {
