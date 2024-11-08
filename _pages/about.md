@@ -12,7 +12,7 @@ redirect_from:
 .name-highlight {
     color: #68ABC5;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 .section-heading {
     color: #666;
