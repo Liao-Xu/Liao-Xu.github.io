@@ -32,22 +32,8 @@ navLinks.forEach(link => {
     });
 });
 
-// Smooth scrolling for navigation links
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-            const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+// Navigation links - no automatic scrolling, only manual clicks
+// Removed smooth scrolling behavior - users must click to navigate
 
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
@@ -61,28 +47,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Active navigation link highlighting
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
+// Removed automatic active link highlighting - navigation is manual only
 
 // Intersection Observer for animations
 const observerOptions = {
@@ -198,16 +163,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    const heroContent = document.querySelector('.hero-content');
-    
-    if (hero && scrolled < hero.offsetHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+// Removed parallax scroll effect - static positioning only
 
 // Typewriter effect for hero title
 document.addEventListener('DOMContentLoaded', () => {

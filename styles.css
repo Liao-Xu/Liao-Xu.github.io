@@ -813,10 +813,7 @@ section {
     }
 }
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
+/* Smooth scrolling disabled - navigation only via clicks */
 
 /* Loading animation */
 @keyframes fadeInUp {
