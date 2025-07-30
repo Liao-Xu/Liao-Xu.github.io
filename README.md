@@ -36,11 +36,11 @@ A modern, responsive personal website showcasing the academic and research profi
 
 To deploy this website to GitHub Pages:
 
-1. Create a new repository named `xu-liao-personal`
+1. Create a new repository named `Liao-Xu.github.io`
 2. Upload all files to the repository
 3. Go to repository Settings → Pages
 4. Set source to "Deploy from a branch" and select "main"
-5. Your site will be available at `https://Liao-Xu.github.io/xu-liao-personal`
+5. Your site will be available at `https://liao-xu.github.io`
 
 ## Customization
 
