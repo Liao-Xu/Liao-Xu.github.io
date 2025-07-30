@@ -19,9 +19,6 @@
                     <a href="#home" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
                     <a href="#publications" class="nav-link">Publications</a>
                 </li>
                 <li class="nav-item">
@@ -46,14 +43,31 @@
                     <div class="hero-text">
                         <h1 class="hero-title">Dr. Xu Liao</h1>
                         <p class="hero-subtitle">Postdoctoral Research Scientist in Biostatistics</p>
-                        <p class="hero-description">
-                            I develop statistical methods and computational tools for analyzing 
-                            single-cell and spatial transcriptomics data. My research focuses on 
-                            understanding cellular dynamics through advanced machine learning approaches.
-                        </p>
+                        <div class="hero-about">
+                            <p class="hero-description">
+                                I am a Postdoctoral Research Scientist in Biostatistics at Columbia University, 
+                                working with <a href="https://www.publichealth.columbia.edu/profile/wenpin-hou-phd" target="_blank">Prof. Wenpin Hou</a>. 
+                                I develop statistical methods and computational tools for single-cell and spatial 
+                                transcriptomics data, with expertise in RNA velocity analysis and deep generative modeling.
+                            </p>
+                            <div class="education-timeline">
+                                <div class="edu-item">
+                                    <span class="edu-year">2025-Present</span>
+                                    <span class="edu-detail">Postdoc, Columbia University</span>
+                                </div>
+                                <div class="edu-item">
+                                    <span class="edu-year">2019-2024</span>
+                                    <span class="edu-detail">Ph.D., Duke-NUS Medical School</span>
+                                </div>
+                                <div class="edu-item">
+                                    <span class="edu-year">2015-2019</span>
+                                    <span class="edu-detail">B.S., Xi'an Jiaotong University</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="hero-buttons">
-                            <a href="#about" class="btn btn-primary">About Me</a>
-                            <a href="#publications" class="btn btn-secondary">Research</a>
+                            <a href="#publications" class="btn btn-primary">Publications</a>
+                            <a href="#talks" class="btn btn-secondary">Talks</a>
                         </div>
                         <div class="social-links">
                             <a href="https://scholar.google.com/citations?user=_F26oo4AAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
@@ -85,64 +99,6 @@
             </div>
         </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2>About Me</h2>
-                    <p>Biostatistics researcher focused on advancing computational methods for biological data</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            I am currently a Postdoctoral Research Scientist in the Department of Biostatistics at 
-                            Columbia University, working with <a href="https://www.publichealth.columbia.edu/profile/wenpin-hou-phd" target="_blank">Prof. Wenpin Hou</a>. 
-                            I completed my Ph.D. in Biostatistics and Health Data Science at Duke-NUS Medical School, 
-                            National University of Singapore in 2024, advised by 
-                            <a href="https://sites.google.com/view/liujinlab/home" target="_blank">Prof. Jin Liu</a>.
-                        </p>
-                        <p>
-                            My research bridges statistics, machine learning, and computational biology. I develop 
-                            innovative methods for single-cell RNA sequencing and spatial transcriptomics data, 
-                            with particular expertise in RNA velocity analysis, deep generative modeling, and 
-                            representation learning. My work aims to uncover the dynamic processes underlying 
-                            cellular development and disease progression.
-                        </p>
-                        <p>
-                            Before my doctoral studies, I earned my Bachelor's degree in Statistics from Xi'an 
-                            Jiaotong University in 2019, where I developed my foundation in statistical theory 
-                            and computational methods.
-                        </p>
-                    </div>
-                    <div class="timeline">
-                        <h3>Experience & Education</h3>
-                        <div class="timeline-item">
-                            <div class="timeline-date">Feb 2025 - Present</div>
-                            <div class="timeline-content">
-                                <h4>Postdoctoral Research Scientist</h4>
-                                <p>Columbia University - Department of Biostatistics</p>
-                                <p>Mentor: Prof. Wenpin Hou</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">Aug 2019 - Oct 2024</div>
-                            <div class="timeline-content">
-                                <h4>Ph.D. in Biostatistics and Health Data Science</h4>
-                                <p>Duke-NUS Medical School, National University of Singapore</p>
-                                <p>Advisor: Prof. Jin Liu</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">Sep 2015 - Jun 2019</div>
-                            <div class="timeline-content">
-                                <h4>Bachelor in Statistics</h4>
-                                <p>Xi'an Jiaotong University - School of Mathematics and Statistics</p>
-                                <p>Mentor: Prof. Yao Wang</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section id="publications" class="publications">
             <div class="container">
@@ -263,65 +219,81 @@
                     <div class="talk-item">
                         <div class="talk-date">2024</div>
                         <div class="talk-info">
-                            <h4>Multivariate stochastic modeling for transcriptional dynamics with SDEvelo</h4>
-                            <p class="talk-venue">International Conference on Computational Biology</p>
-                            <p class="talk-location">Virtual Conference</p>
-                            <p class="talk-description">
-                                Presented our novel approach for modeling RNA velocity using stochastic differential equations 
-                                with cell-specific latent time, enabling more accurate inference of cellular trajectories.
-                            </p>
+                            <h4>High-dimensional deep learning approaches for single-cell and spatial transcriptomics</h4>
+                            <p class="talk-venue">Ph.D. Thesis Defense</p>
+                            <p class="talk-location">Duke-NUS Medical School, Singapore</p>
+                        </div>
+                    </div>
+                    
+                    <div class="talk-item">
+                        <div class="talk-date">2024</div>
+                        <div class="talk-info">
+                            <h4>Deep Learning in Genomics: Pioneering Methods & Future Horizons</h4>
+                            <p class="talk-venue">Columbia University</p>
+                            <p class="talk-location">Online</p>
+                        </div>
+                    </div>
+                    
+                    <div class="talk-item">
+                        <div class="talk-date">2024</div>
+                        <div class="talk-info">
+                            <h4>SDEvelo: a deep generative approach for transcriptional dynamics with cell-specific latent time and multivariate stochastic modeling</h4>
+                            <p class="talk-venue">Xi'an Jiaotong University</p>
+                            <p class="talk-location">Online</p>
+                        </div>
+                    </div>
+                    
+                    <div class="talk-item">
+                        <div class="talk-date">2024</div>
+                        <div class="talk-info">
+                            <h4>Single-cell RNA Velocity Analysis</h4>
+                            <p class="talk-venue">16th National Symposium on Survival Analysis and Applied Statistics</p>
+                            <p class="talk-location">Hangzhou, China</p>
+                        </div>
+                    </div>
+                    
+                    <div class="talk-item">
+                        <div class="talk-date">2024</div>
+                        <div class="talk-info">
+                            <h4>Multivariate stochastic modeling for transcriptional dynamics with cell-specific latent time using SDEvelo</h4>
+                            <p class="talk-venue">Wuhan University</p>
+                            <p class="talk-location">Wuhan, China</p>
                         </div>
                     </div>
                     
                     <div class="talk-item">
                         <div class="talk-date">2023</div>
                         <div class="talk-info">
-                            <h4>Deep Learning for Single-cell Data Integration and Analysis</h4>
-                            <p class="talk-venue">Duke-NUS Medical School Seminar Series</p>
-                            <p class="talk-location">Singapore</p>
-                            <p class="talk-description">
-                                Invited seminar on computational methods for integrating multi-modal single-cell data, 
-                                focusing on PRECAST for spatial transcriptomics analysis.
-                            </p>
+                            <h4>Stochastic Differential Equations Informed RNA Velocity with SDEvelo</h4>
+                            <p class="talk-venue">12th ICSA Conference</p>
+                            <p class="talk-location">Hong Kong, China</p>
                         </div>
                     </div>
                     
                     <div class="talk-item">
                         <div class="talk-date">2023</div>
                         <div class="talk-info">
-                            <h4>Statistical Methods for Spatial Transcriptomics Data Analysis</h4>
-                            <p class="talk-venue">International Society for Computational Biology (ISCB) Asia-Pacific Conference</p>
+                            <h4>Stochastic Differential Equations Informed RNA Velocity with SDEvelo</h4>
+                            <p class="talk-venue">1st Duke-NUS Health Data Science Symposium</p>
                             <p class="talk-location">Singapore</p>
-                            <p class="talk-description">
-                                Presented probabilistic embedding and clustering methods for integrating spatial 
-                                transcriptomics data with applications to tissue architecture analysis.
-                            </p>
                         </div>
                     </div>
                     
                     <div class="talk-item">
-                        <div class="talk-date">2022</div>
+                        <div class="talk-date">2023</div>
                         <div class="talk-info">
-                            <h4>Joint Dimension Reduction and Clustering for Single-cell RNA-seq Data</h4>
-                            <p class="talk-venue">Biostatistics Student Research Conference</p>
-                            <p class="talk-location">National University of Singapore</p>
-                            <p class="talk-description">
-                                Oral presentation on novel clustering methods that simultaneously perform dimension 
-                                reduction and cell type identification in single-cell RNA sequencing data.
-                            </p>
+                            <h4>Invariant and Sufficient Supervised Representation Learning</h4>
+                            <p class="talk-venue">IJCNN</p>
+                            <p class="talk-location">Queensland, Australia</p>
                         </div>
                     </div>
                     
                     <div class="talk-item">
                         <div class="talk-date">2021</div>
                         <div class="talk-info">
-                            <h4>Deep Generative Models for Representation Learning in Genomics</h4>
-                            <p class="talk-venue">Statistical Methods in Genomics Workshop</p>
-                            <p class="talk-location">Virtual Event</p>
-                            <p class="talk-description">
-                                Workshop presentation on applying deep learning techniques to genomic data analysis, 
-                                with focus on variational autoencoders and their applications in biostatistics.
-                            </p>
+                            <h4>Deep Dimension Reduction for Supervised Representation Learning</h4>
+                            <p class="talk-venue">Xi'an Jiaotong University</p>
+                            <p class="talk-location">Xi'an, China</p>
                         </div>
                     </div>
                 </div>
