@@ -534,8 +534,8 @@ section {
 }
 
 .publication-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 0.75rem;
 }
 
@@ -700,6 +700,66 @@ section {
     color: var(--text-light);
     font-style: italic;
     font-size: 0.8rem;
+}
+
+/* Awards Section */
+.awards {
+    background: transparent;
+    position: relative;
+}
+
+.awards::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    opacity: 0.95;
+    pointer-events: none;
+}
+
+.awards-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.awards-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.award-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+    z-index: 1;
+}
+
+.award-item:last-child {
+    border-bottom: none;
+}
+
+.award-year {
+    min-width: 80px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.award-detail {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 500;
 }
 
 /* Contact Section */
@@ -936,7 +996,8 @@ section {
     
     .featured-grid,
     .publication-list,
-    .talks-content {
+    .talks-content,
+    .awards-list {
         grid-template-columns: 1fr;
     }
 
