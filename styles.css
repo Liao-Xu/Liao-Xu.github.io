@@ -75,11 +75,11 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 50px;
 }
 
 .nav-logo a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: none;
@@ -144,7 +144,7 @@ body::before {
     display: flex;
     align-items: center;
     background: transparent;
-    padding-top: 70px;
+    padding-top: 50px;
     position: relative;
     overflow-x: hidden;
 }
@@ -810,7 +810,7 @@ section {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 50px;
+        top: 40px;
         flex-direction: column;
         background: var(--bg-white);
         backdrop-filter: blur(40px) saturate(200%);
@@ -850,11 +850,11 @@ section {
     
     .nav-container {
         padding: 0 1rem;
-        height: 50px;
+        height: 40px;
     }
 
     .nav-logo a {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .publication-item:hover,
