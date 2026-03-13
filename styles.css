@@ -423,6 +423,15 @@ section {
     margin: 0 auto;
 }
 
+/* Match section content width to hero card */
+.featured-research > .container,
+.publications > .container,
+.talks > .container,
+.awards > .container {
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
 /* Publications Section */
 .publications {
     background: transparent;
@@ -439,7 +448,7 @@ section {
     background: var(--glass-bg-strong);
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
-    opacity: 0.7;
+    opacity: 0.85;
     pointer-events: none;
 }
 
@@ -480,7 +489,6 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    max-width: 80%;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -626,14 +634,23 @@ section {
 }
 
 .talks::before {
-    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    opacity: 0.7;
+    pointer-events: none;
 }
 
 .talks-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
-    max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -702,12 +719,11 @@ section {
     background: var(--glass-bg-strong);
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
-    opacity: 0.7;
+    opacity: 0.85;
     pointer-events: none;
 }
 
 .awards-content {
-    max-width: 1000px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
