@@ -29,8 +29,8 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background: #f0f4f8 url('background.jpg') center/cover no-repeat;
-    background-attachment: scroll;
+    background: #f0f4f8 url('background.jpg') center/cover fixed no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     position: relative;
 }
