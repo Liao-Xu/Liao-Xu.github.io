@@ -784,17 +784,7 @@ section {
 }
 
 .contact::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--glass-bg-strong);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    opacity: 0.95;
-    pointer-events: none;
+    display: none;
 }
 
 .contact-content {
