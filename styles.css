@@ -29,23 +29,9 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background: #c8ead8 url('background.jpg') center/cover fixed no-repeat;
-    background-attachment: fixed;
+    background: #c8ead8 url('background.jpg') center/cover no-repeat;
     min-height: 100vh;
     position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(1px);
-    z-index: -1;
-    pointer-events: none;
 }
 
 .container {
