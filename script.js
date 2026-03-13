@@ -170,17 +170,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
         const text = heroTitle.textContent;
+        // Reserve the full height so layout doesn't shift
+        heroTitle.style.minHeight = heroTitle.offsetHeight + 'px';
         heroTitle.textContent = '';
-        
+
         let i = 0;
         const typeWriter = () => {
             if (i < text.length) {
                 heroTitle.textContent += text.charAt(i);
                 i++;
                 setTimeout(typeWriter, 100);
+            } else {
+                // Remove fixed height after animation completes
+                heroTitle.style.minHeight = '';
             }
         };
-        
+
         // Start typewriter effect after a short delay
         setTimeout(typeWriter, 500);
     }
