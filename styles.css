@@ -140,7 +140,7 @@ body::before {
 
 /* Hero Section */
 .hero {
-    min-height: 92vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     background: transparent;
