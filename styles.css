@@ -146,7 +146,7 @@ body::before {
     background: transparent;
     padding-top: 70px;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .hero::before {
@@ -165,9 +165,11 @@ body::before {
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     position: relative;
     z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .hero-content {
@@ -801,6 +803,10 @@ section {
 }
 
 @media (max-width: 768px) {
+    .hero-container {
+        padding: 0 0.75rem;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
