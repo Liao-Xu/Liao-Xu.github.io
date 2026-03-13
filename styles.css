@@ -140,7 +140,7 @@ body::before {
 
 /* Hero Section */
 .hero {
-    min-height: 75vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     background: transparent;
@@ -397,7 +397,7 @@ body::before {
 section {
     padding: 3.5rem 0;
     position: relative;
-    scroll-margin-top: 80px;
+    scroll-margin-top: 70px;
 }
 
 .section-header {
