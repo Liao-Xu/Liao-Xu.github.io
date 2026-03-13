@@ -480,15 +480,25 @@ section {
     border-bottom: none;
 }
 
+.publication-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .pub-figure {
-    width: 100%;
-    max-height: 200px;
+    width: 180px;
+    min-width: 180px;
+    height: auto;
     object-fit: contain;
     border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
     background: #fff;
     padding: 0.25rem;
     border: 1px solid var(--border-light);
+}
+
+.pub-info {
+    flex: 1;
 }
 
 .publication-item h4 {
@@ -900,6 +910,15 @@ section {
         font-size: 0.85rem;
     }
     
+    .publication-item {
+        flex-direction: column;
+    }
+
+    .pub-figure {
+        width: 100%;
+        min-width: unset;
+    }
+
     .publication-links {
         flex-wrap: wrap;
     }
