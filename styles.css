@@ -494,10 +494,30 @@ section {
     box-shadow: var(--shadow-lg);
 }
 
+.featured-figure {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 0.75rem;
+    border-radius: 0.65rem;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.featured-figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .featured-card h4 {
     font-size: 1.05rem;
     color: var(--text-dark);
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
     font-weight: 700;
 }
 
