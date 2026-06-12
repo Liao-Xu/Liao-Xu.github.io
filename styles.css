@@ -903,6 +903,7 @@ section {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .featured-card::before {
@@ -1614,6 +1615,16 @@ html[data-theme="dark"] .publication-links a {
     width: 100%;
     display: block;
     border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.visitor-map-link {
+    display: block;
+    text-decoration: none;
+}
+
+.visitor-map-link:hover #visitorMapCanvas {
+    transform: scale(1.02);
 }
 
 .visitor-map-stats {

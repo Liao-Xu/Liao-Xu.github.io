@@ -425,3 +425,17 @@ document.head.appendChild(style);
         });
     }
 })();
+
+// ===================== Featured cards open their paper =====================
+// Clicking anywhere on a featured-research card opens that card's paper link;
+// the inner links (Paper, Software) keep their own behavior.
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.featured-card').forEach(card => {
+        const paper = card.querySelector('.publication-links a');
+        if (!paper) return;
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('a')) return;
+            window.open(paper.href, '_blank', 'noopener');
+        });
+    });
+});
