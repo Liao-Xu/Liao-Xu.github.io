@@ -111,7 +111,8 @@
     if (!WORKER_URL || WORKER_URL.indexOf('__') === 0) return;
 
     // count this visit once per session, then load stats
-    const ping = sessionStorage.getItem('vm_hit')
+    // (data-no-hit on the canvas — e.g. the stats page — views without counting)
+    const ping = (canvas.dataset.noHit !== undefined || sessionStorage.getItem('vm_hit'))
         ? Promise.resolve()
         : fetch(WORKER_URL + '/hit', { method: 'POST' })
             .then(() => sessionStorage.setItem('vm_hit', '1'))

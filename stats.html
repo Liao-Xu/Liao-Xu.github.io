@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Visitor Stats - Xu Liao</title>
+    <link rel="preload" href="background.webp" as="image" type="image/webp">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function () {
+            var t = localStorage.getItem("theme");
+            if (!t) t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", t);
+        })();
+    </script>
+    <style>
+        .stats-wrap {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 90px 1.25rem 3rem;
+        }
+
+        .stats-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.4rem;
+        }
+
+        .stats-head h1 {
+            font-size: 1.6rem;
+            color: var(--text-dark);
+        }
+
+        .stats-head a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .stats-head a:hover {
+            text-decoration: underline;
+        }
+
+        .stats-panel {
+            background: var(--glass-bg-strong);
+            backdrop-filter: blur(20px) saturate(150%);
+            -webkit-backdrop-filter: blur(20px) saturate(150%);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.2rem;
+            box-shadow: var(--shadow);
+            padding: 1.6rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .stats-numbers {
+            display: flex;
+            gap: 2.5rem;
+            justify-content: center;
+            margin-bottom: 1.4rem;
+            flex-wrap: wrap;
+        }
+
+        .stats-numbers .num {
+            text-align: center;
+        }
+
+        .stats-numbers .num b {
+            display: block;
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stats-numbers .num span {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        .country-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .country-table th {
+            text-align: left;
+            font-size: 0.74rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            padding: 0.45rem 0.6rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .country-table th:last-child {
+            text-align: right;
+        }
+
+        .country-table td {
+            padding: 0.5rem 0.6rem;
+            border-bottom: 1px solid var(--glass-border);
+            color: var(--text-dark);
+            font-size: 0.92rem;
+        }
+
+        .country-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .country-table .flag {
+            font-size: 1.15rem;
+            margin-right: 0.5rem;
+        }
+
+        .country-table .count {
+            text-align: right;
+            font-weight: 600;
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        .country-table .bar {
+            height: 5px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            margin-top: 0.3rem;
+            min-width: 4px;
+        }
+
+        .stats-note {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span><span class="a4"></span></div>
+    <canvas id="cosmos" aria-hidden="true"></canvas>
+
+    <main class="stats-wrap">
+        <div class="stats-head">
+            <h1>🌍 Visitor Stats</h1>
+            <a href="index.html">← back to liao-xu.github.io</a>
+        </div>
+
+        <div class="stats-panel">
+            <div class="stats-numbers">
+                <div class="num"><b id="numVisits">—</b><span>Total visits</span></div>
+                <div class="num"><b id="numCountries">—</b><span>Countries</span></div>
+                <div class="num"><b id="numTop">—</b><span>Top country</span></div>
+            </div>
+            <canvas id="visitorMapCanvas" data-no-hit aria-label="World map showing visitor locations"></canvas>
+            <p class="visitor-map-stats" id="visitorMapStats" aria-live="polite"></p>
+        </div>
+
+        <div class="stats-panel">
+            <table class="country-table" aria-label="Visits by country">
+                <thead>
+                    <tr><th>Country</th><th>Visits</th></tr>
+                </thead>
+                <tbody id="countryRows">
+                    <tr><td colspan="2">Loading…</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="stats-note">Counts are anonymous country-level tallies from your Cloudflare Worker — no IPs or personal data are collected. Viewing this page is not counted as a visit.</p>
+    </main>
+
+    <script src="visitor-map.js"></script>
+    <script>
+        (function () {
+            const names = new Intl.DisplayNames(['en'], { type: 'region' });
+            const flag = cc => cc.replace(/./g, ch => String.fromCodePoint(127397 + ch.charCodeAt(0)));
+
+            fetch('https://visitor-map.liao-xu.workers.dev/stats')
+                .then(r => r.json())
+                .then(data => {
+                    const entries = Object.entries(data.countries || {})
+                        .filter(([cc]) => cc !== 'XX')
+                        .sort((a, b) => b[1] - a[1]);
+                    const max = entries.length ? entries[0][1] : 1;
+
+                    document.getElementById('numVisits').textContent = data.total.toLocaleString();
+                    document.getElementById('numCountries').textContent = entries.length;
+                    document.getElementById('numTop').textContent = entries.length ? flag(entries[0][0]) : '—';
+
+                    const rows = entries.map(([cc, n]) => {
+                        let name = cc;
+                        try { name = names.of(cc) || cc; } catch (e) {}
+                        const pct = Math.max(2, Math.round(n / max * 100));
+                        return '<tr><td><span class="flag">' + flag(cc) + '</span>' + name +
+                            '<div class="bar" style="width:' + pct + '%"></div></td>' +
+                            '<td class="count">' + n.toLocaleString() + '</td></tr>';
+                    });
+                    document.getElementById('countryRows').innerHTML =
+                        rows.join('') || '<tr><td colspan="2">No visits recorded yet.</td></tr>';
+                })
+                .catch(() => {
+                    document.getElementById('countryRows').innerHTML =
+                        '<tr><td colspan="2">Could not reach the stats service.</td></tr>';
+                });
+        })();
+    </script>
+</body>
+</html>
