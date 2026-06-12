@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xu Liao - Biostatistics Researcher</title>
     <link rel="preload" href="background.webp" as="image" type="image/webp">
+    <script>
+        (function () {
+            var t = localStorage.getItem("theme");
+            if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", t);
+        })();
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span><span class="a4"></span></div>
+    <canvas id="cosmos" aria-hidden="true"></canvas>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#home">Xu Liao</a>
             </div>
+            <div class="nav-right">
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#home" class="nav-link">Home</a>
@@ -35,6 +47,9 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
+                <button class="music-toggle" aria-label="Play music" aria-pressed="false"><i class="fas fa-music"></i></button>
+                <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            </div>
             <div class="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -474,7 +489,7 @@
                                 <h4>Visitor Map</h4>
                                 <div class="cluster-map-container">
                                     <a href="https://mapmyvisitors.com/web/1c5cd" title="Visit tracker" target="_blank">
-                                        <img src="https://mapmyvisitors.com/map.png?d=7FeKN3ZgLDIqLLU0FIm0vAxGa1ACTRwhJthLX_m0VFc&cl=ffffff" alt="Visitor Map" onerror="this.closest('.cluster-map-item').style.display='none'" />
+                                        <img src="https://mapmyvisitors.com/map.png?d=7FeKN3ZgLDIqLLU0FIm0vAxGa1ACTRwhJthLX_m0VFc&cl=ffffff" alt="Visitor Map" onerror="if(this.dataset.r){this.closest('.cluster-map-item').style.display='none'}else{this.dataset.r=1;var i=this;setTimeout(function(){i.src+='&r=1'},3000)}" />
                                     </a>
                                 </div>
                             </div>
@@ -497,6 +512,21 @@
             </div>
         </div>
     </footer>
+
+    <div class="music-player" id="musicPlayer" aria-hidden="true">
+        <div class="music-player-head">
+            <span class="music-eq" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            <div class="music-meta">
+                <strong>Smooth</strong>
+                <span>Santana ft. Rob Thomas</span>
+            </div>
+            <button class="music-expand" aria-label="Expand player"><i class="fas fa-expand"></i></button>
+            <button class="music-close" aria-label="Close music player">&times;</button>
+        </div>
+        <div class="music-frame"><div id="ytplayer"></div></div>
+
+    </div>
+    <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>
