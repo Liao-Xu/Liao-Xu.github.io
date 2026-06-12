@@ -1,0 +1,7 @@
+name = "visitor-map"
+main = "worker.js"
+compatibility_date = "2026-06-01"
+
+[[kv_namespaces]]
+binding = "VISITS"
+id = "515501b5a7b342a08381ffd78b080633"

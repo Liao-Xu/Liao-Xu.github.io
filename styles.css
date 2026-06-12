@@ -1609,6 +1609,23 @@ html[data-theme="dark"] .publication-links a {
     transform: scale(1.02);
 }
 
+/* Cosmic visitor map (self-hosted canvas widget) */
+#visitorMapCanvas {
+    width: 100%;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+.visitor-map-stats {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--primary-color);
+    text-align: center;
+    min-height: 1em;
+}
+
 /* Cluster Map Fixed Position (if needed elsewhere) */
 .cluster-map-fixed {
     position: fixed;
