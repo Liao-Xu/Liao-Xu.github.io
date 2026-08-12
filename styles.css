@@ -693,7 +693,7 @@ html {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
