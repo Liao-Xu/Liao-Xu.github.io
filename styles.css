@@ -823,12 +823,12 @@ section {
 
 /* Match section content width to hero card */
 .featured-research > .container,
-.publications > .container {
+.publications > .container,
+.talks > .container {
     max-width: 1200px;
     padding: 0 1rem;
 }
 
-.talks > .container,
 .awards > .container {
     max-width: 1000px;
     padding: 0 1rem;
@@ -948,7 +948,8 @@ section {
 
 .featured-figure img {
     width: 100%;
-    height: auto;
+    height: 160px;
+    object-fit: contain;
     display: block;
     border-radius: 0.4rem;
     transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
