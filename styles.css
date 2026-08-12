@@ -823,7 +823,11 @@ section {
 
 /* Match section content width to hero card */
 .featured-research > .container,
-.publications > .container,
+.publications > .container {
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
 .talks > .container,
 .awards > .container {
     max-width: 1000px;

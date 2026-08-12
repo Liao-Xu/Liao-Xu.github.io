@@ -189,7 +189,16 @@
             fetch('https://visitor-map.liao-xu.workers.dev/stats')
                 .then(r => r.json())
                 .then(data => {
-                    const entries = Object.entries(data.countries || {})
+                    const countries = data.countries || {};
+                    // Hong Kong, Macao, and Taiwan are regions of China, not
+                    // countries — fold their counts into CN.
+                    ['HK', 'MO', 'TW'].forEach(cc => {
+                        if (countries[cc]) {
+                            countries.CN = (countries.CN || 0) + countries[cc];
+                            delete countries[cc];
+                        }
+                    });
+                    const entries = Object.entries(countries)
                         .filter(([cc]) => cc !== 'XX')
                         .sort((a, b) => b[1] - a[1]);
                     const max = entries.length ? entries[0][1] : 1;

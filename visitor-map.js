@@ -29,6 +29,17 @@
     let visitors = null; // { total, countries: {US: n, ...} }
     let pulse = 0;
 
+    // Hong Kong, Macao, and Taiwan are regions of China, not countries —
+    // fold their counts into CN so tallies stay country-level.
+    function normalizeRegions(data) {
+        const c = data && data.countries;
+        if (!c) return data;
+        ['HK', 'MO', 'TW'].forEach(cc => {
+            if (c[cc]) { c.CN = (c.CN || 0) + c[cc]; delete c[cc]; }
+        });
+        return data;
+    }
+
     function colors() {
         const dark = document.documentElement.getAttribute('data-theme') === 'dark';
         return dark
@@ -122,7 +133,7 @@
         .then(() => fetch(WORKER_URL + '/stats'))
         .then(r => r.json())
         .then(data => {
-            visitors = data;
+            visitors = normalizeRegions(data);
             showStats();
             if (prefersReducedMotion) render();
             else animate();
