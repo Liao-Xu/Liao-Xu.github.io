@@ -600,12 +600,16 @@ html {
     gap: 0.4rem;
     margin-bottom: 0.75rem;
     padding: 1rem;
-    background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(139, 92, 246, 0.1));
+    background: linear-gradient(135deg, rgba(224, 242, 254, 0.75), rgba(237, 233, 254, 0.75));
     border-radius: 1rem;
     backdrop-filter: blur(30px) saturate(200%);
     -webkit-backdrop-filter: blur(30px) saturate(200%);
     border: 1px solid rgba(56, 189, 248, 0.18);
     box-shadow: var(--shadow);
+}
+
+html[data-theme="dark"] .education-timeline {
+    background: linear-gradient(135deg, rgba(96, 205, 255, 0.2), rgba(167, 139, 250, 0.2));
 }
 
 .edu-item {
