@@ -893,6 +893,8 @@ section {
 }
 
 .featured-card {
+    display: flex;
+    flex-direction: column;
     padding: 1.25rem;
     background: var(--card-strong-bg);
     border-radius: 1rem;
@@ -970,6 +972,12 @@ section {
     line-height: 1.5;
     margin-bottom: 0.5rem;
     margin-top: 0.35rem;
+}
+
+.featured-card .publication-links {
+    margin-top: auto;
+    margin-left: 0;
+    padding-top: 0.35rem;
 }
 
 .publication-list {
