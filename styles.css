@@ -899,7 +899,7 @@ section {
 .featured-card {
     display: flex;
     flex-direction: column;
-    padding: 1.25rem;
+    padding: 1.1rem 1.25rem;
     background: var(--card-strong-bg);
     border-radius: 1rem;
     border: 1px solid var(--card-strong-border);
@@ -938,7 +938,7 @@ section {
 
 .featured-figure {
     width: 100%;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     border-radius: 0.65rem;
     overflow: hidden;
     background: var(--figure-bg);
@@ -948,7 +948,7 @@ section {
 
 .featured-figure img {
     width: 100%;
-    height: 160px;
+    height: 130px;
     object-fit: contain;
     display: block;
     border-radius: 0.4rem;
@@ -972,11 +972,11 @@ section {
 }
 
 .featured-summary {
-    font-size: 0.83rem;
+    font-size: 0.8rem;
     color: var(--text-light);
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
-    margin-top: 0.35rem;
+    line-height: 1.45;
+    margin-bottom: 0.4rem;
+    margin-top: 0.3rem;
 }
 
 .featured-card .publication-links {
