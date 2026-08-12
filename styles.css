@@ -600,7 +600,7 @@ html {
     gap: 0.4rem;
     margin-bottom: 0.75rem;
     padding: 1rem;
-    background: linear-gradient(135deg, rgba(209, 250, 229, 0.7), rgba(224, 242, 254, 0.75));
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 1rem;
     backdrop-filter: blur(30px) saturate(200%);
     -webkit-backdrop-filter: blur(30px) saturate(200%);
@@ -609,7 +609,7 @@ html {
 }
 
 html[data-theme="dark"] .education-timeline {
-    background: linear-gradient(135deg, rgba(110, 231, 183, 0.18), rgba(96, 205, 255, 0.2));
+    background: rgba(15, 23, 42, 0.18);
 }
 
 .edu-item {
