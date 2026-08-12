@@ -825,9 +825,8 @@ section {
 .featured-research > .container,
 .publications > .container,
 .talks > .container,
-.awards > .container,
-.contact > .container {
-    max-width: 1200px;
+.awards > .container {
+    max-width: 1000px;
     padding: 0 1rem;
 }
 
@@ -1255,7 +1254,7 @@ html[data-theme="dark"] .publication-links a {
 }
 
 .contact-content {
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -1266,7 +1265,7 @@ html[data-theme="dark"] .publication-links a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 2rem;
-    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto;
 }
 
