@@ -29,17 +29,6 @@
     let visitors = null; // { total, countries: {US: n, ...} }
     let pulse = 0;
 
-    // Hong Kong, Macao, and Taiwan are regions of China, not countries —
-    // fold their counts into CN so tallies stay country-level.
-    function normalizeRegions(data) {
-        const c = data && data.countries;
-        if (!c) return data;
-        ['HK', 'MO', 'TW'].forEach(cc => {
-            if (c[cc]) { c.CN = (c.CN || 0) + c[cc]; delete c[cc]; }
-        });
-        return data;
-    }
-
     function colors() {
         const dark = document.documentElement.getAttribute('data-theme') === 'dark';
         return dark
@@ -109,7 +98,7 @@
     function showStats() {
         if (!statsEl || !visitors) return;
         const n = Object.keys(visitors.countries || {}).filter(cc => cc !== 'XX').length;
-        statsEl.textContent = `${visitors.total.toLocaleString()} visits · ${n} ${n === 1 ? 'country' : 'countries'}`;
+        statsEl.textContent = `${visitors.total.toLocaleString()} visits · ${n} ${n === 1 ? 'region' : 'regions'}`;
     }
 
     // first paint (map renders even with no backend)
@@ -133,7 +122,7 @@
         .then(() => fetch(WORKER_URL + '/stats'))
         .then(r => r.json())
         .then(data => {
-            visitors = normalizeRegions(data);
+            visitors = data;
             showStats();
             if (prefersReducedMotion) render();
             else animate();

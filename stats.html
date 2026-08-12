@@ -159,17 +159,17 @@
         <div class="stats-panel">
             <div class="stats-numbers">
                 <div class="num"><b id="numVisits">—</b><span>Total visits</span></div>
-                <div class="num"><b id="numCountries">—</b><span>Countries</span></div>
-                <div class="num"><b id="numTop">—</b><span>Top country</span></div>
+                <div class="num"><b id="numCountries">—</b><span>Regions</span></div>
+                <div class="num"><b id="numTop">—</b><span>Top region</span></div>
             </div>
             <canvas id="visitorMapCanvas" data-no-hit aria-label="World map showing visitor locations"></canvas>
             <p class="visitor-map-stats" id="visitorMapStats" aria-live="polite"></p>
         </div>
 
         <div class="stats-panel">
-            <table class="country-table" aria-label="Visits by country">
+            <table class="country-table" aria-label="Visits by region">
                 <thead>
-                    <tr><th>Country</th><th>Visits</th></tr>
+                    <tr><th>Region</th><th>Visits</th></tr>
                 </thead>
                 <tbody id="countryRows">
                     <tr><td colspan="2">Loading…</td></tr>
@@ -177,7 +177,7 @@
             </table>
         </div>
 
-        <p class="stats-note">Counts are anonymous country-level tallies from your Cloudflare Worker — no IPs or personal data are collected. Viewing this page is not counted as a visit.</p>
+        <p class="stats-note">Counts are anonymous region-level tallies from your Cloudflare Worker — no IPs or personal data are collected. Viewing this page is not counted as a visit.</p>
     </main>
 
     <script src="visitor-map.js"></script>
@@ -189,16 +189,7 @@
             fetch('https://visitor-map.liao-xu.workers.dev/stats')
                 .then(r => r.json())
                 .then(data => {
-                    const countries = data.countries || {};
-                    // Hong Kong, Macao, and Taiwan are regions of China, not
-                    // countries — fold their counts into CN.
-                    ['HK', 'MO', 'TW'].forEach(cc => {
-                        if (countries[cc]) {
-                            countries.CN = (countries.CN || 0) + countries[cc];
-                            delete countries[cc];
-                        }
-                    });
-                    const entries = Object.entries(countries)
+                    const entries = Object.entries(data.countries || {})
                         .filter(([cc]) => cc !== 'XX')
                         .sort((a, b) => b[1] - a[1]);
                     const max = entries.length ? entries[0][1] : 1;
