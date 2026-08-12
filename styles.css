@@ -636,15 +636,11 @@ html {
 
 .edu-year {
     min-width: 100px;
-    text-align: center;
     color: var(--primary-color);
-    font-weight: 700;
-    font-size: 0.72rem;
-    letter-spacing: 0.05em;
-    background: rgba(56, 189, 248, 0.1);
-    border: 1px solid rgba(56, 189, 248, 0.28);
-    padding: 0.14rem 0.55rem;
-    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
     flex-shrink: 0;
 }
 
@@ -693,7 +689,7 @@ html {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+    background: var(--primary-color);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
