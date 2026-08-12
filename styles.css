@@ -821,11 +821,11 @@ section {
     margin: 0 auto;
 }
 
-/* Match section content width to hero card */
+/* Section content width: 0.9x the hero card */
 .featured-research > .container,
 .publications > .container,
 .talks > .container {
-    max-width: 1200px;
+    max-width: 1080px;
     padding: 0 1rem;
 }
 
