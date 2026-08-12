@@ -550,7 +550,7 @@ html {
 .hero-subtitle {
     font-size: 0.95rem;
     color: var(--primary-color);
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
     font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
@@ -571,10 +571,10 @@ html {
 }
 
 .hero-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-light);
-    margin-bottom: 1rem;
-    line-height: 1.6;
+    margin-bottom: 0.9rem;
+    line-height: 1.55;
 }
 
 .hero-description a {
@@ -597,7 +597,8 @@ html {
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    margin-left: -1.75rem; /* hang the rail in the card's padding gutter so text aligns flush left */
     padding: 0.2rem 0 0.2rem 1.2rem;
     position: relative;
 }
@@ -1844,6 +1845,7 @@ html[data-theme="dark"] .publication-links a {
 
     .education-timeline {
         gap: 0.4rem;
+        margin-left: 0;
     }
 
     .hero-content {
