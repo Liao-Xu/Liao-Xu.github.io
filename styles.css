@@ -885,7 +885,7 @@ section {
 
 .featured-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin: 0 auto;
     position: relative;
@@ -1667,6 +1667,10 @@ html[data-theme="dark"] .publication-links a {
     .image-container {
         width: 280px;
         height: 280px;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
