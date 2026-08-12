@@ -1115,8 +1115,9 @@ html[data-theme="dark"] .publication-links a {
 
 .talk-item {
     display: flex;
-    gap: 1rem;
-    padding: 0.75rem 1rem;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1rem 1.1rem;
     background: var(--card-bg);
     border-radius: 0.85rem;
     border: 1px solid var(--card-border);
@@ -1133,33 +1134,59 @@ html[data-theme="dark"] .publication-links a {
 }
 
 .talk-date {
-    min-width: 60px;
-    font-size: 0.9rem;
+    align-self: flex-start;
+    font-size: 0.72rem;
     font-weight: 700;
+    letter-spacing: 0.05em;
     color: var(--primary-color);
-    text-align: left;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.28);
+    padding: 0.12rem 0.6rem;
+    border-radius: 999px;
     flex-shrink: 0;
 }
 
+.talk-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
 .talk-info h4 {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     color: var(--text-dark);
-    margin-bottom: 0.25rem;
-    line-height: 1.4;
+    margin-bottom: 0.35rem;
+    line-height: 1.45;
     font-weight: 600;
 }
 
 .talk-venue {
     font-weight: 500;
-    color: var(--text-dark);
-    margin-bottom: 0.125rem;
-    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 0.55rem;
+    font-size: 0.82rem;
+    line-height: 1.4;
 }
 
 .talk-location {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid var(--border-light);
     color: var(--text-light);
-    font-style: italic;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+}
+
+.talk-location::before {
+    content: "\f3c5";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 0.7rem;
+    color: var(--primary-color);
+    opacity: 0.75;
 }
 
 /* Awards Section */
