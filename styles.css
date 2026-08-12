@@ -470,6 +470,22 @@ html {
     gap: 2.5rem;
     align-items: center;
     margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* jewel hairline along the card's top edge */
+.hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), var(--accent-color), transparent);
+    opacity: 0.55;
+    pointer-events: none;
 }
 
 .hero-text {
@@ -534,10 +550,22 @@ html {
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 0.95rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
     font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.hero-subtitle::after {
+    content: '';
+    height: 1px;
+    width: 56px;
+    background: linear-gradient(90deg, var(--accent-color), transparent);
 }
 
 .hero-about {
@@ -608,13 +636,16 @@ html {
 
 .edu-year {
     min-width: 100px;
+    text-align: center;
     color: var(--primary-color);
     font-weight: 700;
-    font-size: 0.9rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.28);
+    padding: 0.14rem 0.55rem;
+    border-radius: 999px;
+    flex-shrink: 0;
 }
 
 .edu-detail {
@@ -740,6 +771,26 @@ html {
 @keyframes profileFloat {
     0%, 100% { translate: 0 0; }
     50% { translate: 0 -8px; }
+}
+
+/* slowly rotating aurora ring behind the portrait */
+.image-container::before {
+    content: '';
+    position: absolute;
+    inset: -40%;
+    background: conic-gradient(from 0deg,
+        var(--primary-color), var(--accent-color), #a78bfa,
+        var(--primary-color));
+    animation: ringSpin 10s linear infinite;
+}
+
+@keyframes ringSpin {
+    to { transform: rotate(360deg); }
+}
+
+.profile-img {
+    position: relative;
+    z-index: 1;
 }
 
 .image-container:hover {
