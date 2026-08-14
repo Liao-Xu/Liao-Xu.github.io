@@ -80,10 +80,20 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background: var(--body-bg) url('background.webp') center/cover fixed no-repeat;
-    background-attachment: fixed;
+    background: var(--body-bg);
     min-height: 100vh;
     position: relative;
+}
+
+/* Watercolor photo on a fixed layer — background-attachment: fixed + cover
+   does not render reliably in Safari, so we avoid it. */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url('background.webp') center/cover no-repeat;
+    z-index: -2;
+    pointer-events: none;
 }
 
 body::before {
@@ -115,11 +125,11 @@ html[data-theme="dark"] .cursor-glow {
 
 /* In dark mode the cosmos replaces the watercolor photo + veil */
 html[data-theme="dark"] body {
-    background-image: none;
     background-color: #070b16;
 }
 
-html[data-theme="dark"] body::before {
+html[data-theme="dark"] body::before,
+html[data-theme="dark"] body::after {
     display: none;
 }
 
